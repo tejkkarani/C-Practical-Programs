@@ -8,7 +8,7 @@ void main(){
 	scanf("%d%d", &r1, &c1);
 	printf("Enter rows and columns of matrix 2: \n");
 	scanf("%d%d", &r2, &c2);
-	if(r1 == c2){   //matrix multiplication is only possible if r1 = c2
+	if(c1 == r2){   //matrix multiplication is only possible if c1 = r2
 		printf("Enter elements of first matrix: \n");
 		for(i = 0; i < r1; i++){
 			for(j = 0; j < c1; j++){
@@ -25,7 +25,7 @@ void main(){
 		for(i = 0; i < r1; i++){
 			for(j = 0; j < c2; j++){
 				ans[i][j] = 0;
-				for(k = 0; k < r1; k++){
+				for(k = 0; k < c1; k++){
 					ans[i][j] += a[i][k] * b[k][j];
 				}
 			}
